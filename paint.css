@@ -87,8 +87,8 @@ legend {
   border-radius: 50%; }
 
 #sky {
-  margin-top: 600px;
-  margin-bottom: 600px;
+  margin-top: 800px;
+  margin-bottom: 800px;
   position: relative;
   background-image: url("./img/sky.gif");
   background-position: center center;
@@ -99,8 +99,17 @@ legend {
   position: fixed;
   left: 50%;
   top: 100px;
-  margin-top: 127px;
+  margin-top: -70px;
   background-image: url("./img/sea.gif");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed; }
+
+#blackness {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #000;
+  opacity: 0; }

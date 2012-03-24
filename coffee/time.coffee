@@ -2,14 +2,20 @@ SSSS = window.SunriseSunset ||= {}
 SSSS =
 	init: ->
 		console.log @
-		SSSS.reflection = $('#sea')
+		SSSS.windowHeight = $(window).height()
+		SSSS.$reflection = $('#sea')
+		SSSS.$blackness = $("#blackness")
 		console.log @
 		$(document).bind 'scroll', @onScroll
 		return
 
 	onScroll: (e) ->
 		y = $(document).scrollTop()
-		SSSS.reflection.css
+		perc = 1-(y/SSSS.windowHeight)
+		console.log perc
+		SSSS.$blackness.css
+			opacity: perc
+		SSSS.$reflection.css
 			top: "#{y}px"
 		return
 
