@@ -5,18 +5,15 @@
 
   SSSS = {
     init: function() {
-      console.log(this);
       SSSS.windowHeight = $(window).height();
       SSSS.$reflection = $('#sea');
       SSSS.$blackness = $("#blackness");
-      console.log(this);
-      $(document).bind('scroll', this.onScroll);
+      this.int = setInterval(this.onScroll, 10);
     },
     onScroll: function(e) {
       var perc, y;
       y = $(document).scrollTop();
       perc = 1 - (y / SSSS.windowHeight);
-      console.log(perc);
       SSSS.$blackness.css({
         opacity: perc
       });
