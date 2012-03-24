@@ -64,23 +64,43 @@ legend {
   border: 5px solid #000;
   left: 50%;
   top: 50%;
-  margin-top: -147px;
-  margin-left: -210px; }
+  margin-top: -140px;
+  margin-left: -210px;
+  z-index: 100; }
   #frame #horizon {
-    height: 140px;
-    border-bottom: 5px solid #000; }
+    position: fixed;
+    width: 410px;
+    height: 5px;
+    left: 50%;
+    margin-left: -205px;
+    top: 50%;
+    margin-top: 1px;
+    z-index: 100;
+    background: #000; }
 
-#sun {
+#sky,
+#sea {
   width: 100px;
   height: 100px;
-  background: #FFF;
-  position: relative;
   left: 50%;
   margin-left: -50px;
-  border-radius: 50px;
+  border-radius: 50%; }
+
+#sky {
   margin-top: 600px;
   margin-bottom: 600px;
-  background-image: url("./fire.gif");
+  position: relative;
+  background-image: url("./img/sky.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+#sea {
+  position: fixed;
+  left: 50%;
+  top: 100px;
+  margin-top: 127px;
+  background-image: url("./img/sea.gif");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed; }
