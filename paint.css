@@ -1,0 +1,86 @@
+/*
+YUI 3.4.1 (build 4118)
+Copyright 2011 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+html {
+  color: #000;
+  background: #FFF; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+input, textarea, select {
+  *font-size: 100%; }
+
+legend {
+  color: #000; }
+
+#frame {
+  position: fixed;
+  height: 280px;
+  width: 410px;
+  border: 5px solid #000;
+  left: 50%;
+  top: 50%;
+  margin-top: -147px;
+  margin-left: -210px; }
+  #frame #horizon {
+    height: 140px;
+    border-bottom: 5px solid #000; }
+
+#sun {
+  width: 100px;
+  height: 100px;
+  background: #FFF;
+  position: relative;
+  left: 50%;
+  margin-left: -50px;
+  border-radius: 50px;
+  margin-top: 600px;
+  margin-bottom: 600px;
+  background-image: url("./fire.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
