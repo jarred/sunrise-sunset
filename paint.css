@@ -64,7 +64,7 @@ legend {
   border: 5px solid #000;
   left: 50%;
   top: 50%;
-  margin-top: -140px;
+  margin-top: -144px;
   margin-left: -210px;
   z-index: 100; }
   #frame #horizon {
@@ -87,13 +87,46 @@ legend {
   border-radius: 50%; }
 
 #sky {
+  width: 90px;
+  height: 90px;
   margin-top: 800px;
   margin-bottom: 800px;
   position: relative;
   background-image: url("./img/sky.gif");
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  border: 5px solid black; }
+
+#sky-cover {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin-top: 2px;
+  top: 50%;
+  background: #FFF; }
+
+#sky-cover-2 {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  bottom: 50%;
+  right: 0px;
+  background: #FFF;
+  margin-bottom: 140px; }
+
+#water {
+  position: fixed;
+  left: 50%;
+  margin-left: -205px;
+  top: 50%;
+  width: 410px;
+  height: 140px;
+  margin-top: 1px;
+  background: url("./img/water.gif") no-repeat center center;
+  background-attachment: fixed;
+  z-index: 10; }
 
 #sea {
   position: fixed;
@@ -103,13 +136,39 @@ legend {
   background-image: url("./img/sea.gif");
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-color: #FFF;
+  background-attachment: fixed;
+  z-index: 11; }
 
 #blackness {
   position: fixed;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
+  width: 410px;
+  height: 280px;
+  top: 50%;
+  margin-top: -139px;
+  left: 50%;
+  margin-left: -205px;
   background: #000;
-  opacity: 0; }
+  opacity: 0;
+  z-index: 20; }
+
+p {
+  position: fixed;
+  z-index: 100;
+  width: 300px;
+  margin-left: -150px;
+  bottom: 20%;
+  left: 50%;
+  font: 400 11px/18px "Geneva", Sans-Serif;
+  text-align: center;
+  letter-spacing: 1px; }
+  p a {
+    color: #000;
+    text-decoration: none; }
+    p a:hover {
+      text-decoration: underline; }
+  p span.price {
+    display: block;
+    color: #FF3300; }
+  p span.visitors {
+    color: #BBB; }
