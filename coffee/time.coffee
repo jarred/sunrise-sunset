@@ -14,6 +14,7 @@ SSSS =
 	onScroll: (e) ->
 		y = $(document).scrollTop()
 		perc = SSSS.constrainNumber 1-(y/(SSSS.windowHeight)), 0, 1
+		console.log perc
 		SSSS.$blackness.css
 			opacity: SSSS.constrainNumber perc, 0, 1
 		SSSS.$sun.css
@@ -25,7 +26,6 @@ SSSS =
 	onResize: ->
 		height = $(window).height() * 2
 		SSSS.windowHeight = $(window).height()
-		console.log height
 		SSSS.$scroll.css
 			height: "#{height}px"
 		return
