@@ -5,21 +5,45 @@
 
   SSSS = {
     init: function() {
-      SSSS.windowHeight = $(window).height();
       SSSS.$reflection = $('#sea');
+      SSSS.$scroll = $('#scroll');
       SSSS.$blackness = $("#blackness");
+      SSSS.$sun = $('#sky');
+      $(window).bind('resize', this.onResize);
+      this.onResize();
       this.int = setInterval(this.onScroll, 10);
     },
     onScroll: function(e) {
       var perc, y;
       y = $(document).scrollTop();
-      perc = 1 - (y / SSSS.windowHeight);
+      perc = SSSS.constrainNumber(1 - (y / SSSS.windowHeight), 0, 1);
       SSSS.$blackness.css({
-        opacity: perc
+        opacity: SSSS.constrainNumber(perc, 0, 1)
+      });
+      SSSS.$sun.css({
+        marginTop: "" + (Math.round(-300 * (1 - perc))) + "px"
       });
       SSSS.$reflection.css({
-        top: "" + y + "px"
+        marginTop: "" + (-92 + Math.round(300 * (1 - perc))) + "px"
       });
+    },
+    onResize: function() {
+      var height;
+      height = $(window).height() * 2;
+      SSSS.windowHeight = $(window).height();
+      console.log(height);
+      SSSS.$scroll.css({
+        height: "" + height + "px"
+      });
+    },
+    constrainNumber: function(value, min, max) {
+      if (value < min) {
+        return min;
+      } else if (value > max) {
+        return max;
+      } else {
+        return value;
+      }
     }
   };
 

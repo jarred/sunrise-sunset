@@ -57,6 +57,9 @@ input, textarea, select {
 legend {
   color: #000; }
 
+.hide {
+  display: none; }
+
 #frame {
   position: fixed;
   height: 280px;
@@ -89,14 +92,14 @@ legend {
 #sky {
   width: 90px;
   height: 90px;
-  margin-top: 800px;
-  margin-bottom: 800px;
-  position: relative;
+  top: 50%;
+  position: fixed;
+  margin-top: -244px;
   background-image: url("./img/sky.gif");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  border: 5px solid black; }
+  border: 5px solid #000; }
 
 #sky-cover {
   position: fixed;
@@ -131,13 +134,12 @@ legend {
 #sea {
   position: fixed;
   left: 50%;
-  top: 100px;
-  margin-top: -70px;
+  top: 50%;
+  margin-top: 144px;
   background-image: url("./img/sea.gif");
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  z-index: 11; }
+  background-attachment: fixed; }
 
 #blackness {
   position: fixed;
@@ -174,7 +176,7 @@ p {
 #social {
   position: fixed;
   left: 20px;
-  bottom: 20px; }
+  bottom: 14px; }
   #social .fb-like {
     position: relative;
     top: -3px; }

@@ -1,20 +1,41 @@
 SSSS = window.SunriseSunset ||= {}
 SSSS =
 	init: ->
-		SSSS.windowHeight = $(window).height()
+
 		SSSS.$reflection = $('#sea')
+		SSSS.$scroll = $('#scroll')
 		SSSS.$blackness = $("#blackness")
+		SSSS.$sun = $('#sky')
+		$(window).bind 'resize', @onResize
+		@onResize()		
 		@int = setInterval @onScroll, 10
 		return
 
 	onScroll: (e) ->
 		y = $(document).scrollTop()
-		perc = 1-(y/SSSS.windowHeight)
+		perc = SSSS.constrainNumber 1-(y/(SSSS.windowHeight)), 0, 1
 		SSSS.$blackness.css
-			opacity: perc
+			opacity: SSSS.constrainNumber perc, 0, 1
+		SSSS.$sun.css
+			marginTop: "#{Math.round(-300 * (1 - perc))}px"
 		SSSS.$reflection.css
-			top: "#{y}px"
+			marginTop: "#{-92 + Math.round(300 * (1 - perc))}px"
 		return
 
+	onResize: ->
+		height = $(window).height() * 2
+		SSSS.windowHeight = $(window).height()
+		console.log height
+		SSSS.$scroll.css
+			height: "#{height}px"
+		return
+
+	constrainNumber: (value, min, max) ->
+		if value < min
+			return min
+		else if value > max
+			return max
+		else
+			return value
 
 SSSS.init()
