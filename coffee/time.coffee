@@ -1,7 +1,6 @@
 SSSS = window.SunriseSunset ||= {}
 SSSS =
 	init: ->
-
 		SSSS.$reflection = $('#sea')
 		SSSS.$scroll = $('#scroll')
 		SSSS.$blackness = $("#blackness")
@@ -14,7 +13,6 @@ SSSS =
 	onScroll: (e) ->
 		y = $(document).scrollTop()
 		perc = SSSS.constrainNumber 1-(y/(SSSS.windowHeight)), 0, 1
-		console.log perc
 		SSSS.$blackness.css
 			opacity: SSSS.constrainNumber perc, 0, 1
 		SSSS.$sun.css

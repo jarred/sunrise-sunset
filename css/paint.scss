@@ -14,6 +14,11 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 	
 }
 
+html{
+	font: 400 11px/18px 'Geneva', Sans-Serif;
+	letter-spacing: 1px;	
+}
+
 #frame{
 	position: fixed;
 	height: 280px;
@@ -31,7 +36,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 		left: 50%;
 		margin-left: -205px;
 		top: 50%;
-		margin-top: 1px;
+		margin-top: 0px;
 		z-index: 100;
 		background: #000;
 	}
@@ -52,7 +57,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 	top: 50%;
 	position: fixed;	
 	margin-top: -244px;
-	background-image: url('./img/sky.gif');
+	background-image: url('../img/sky.gif');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -78,25 +83,12 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 	margin-bottom: 140px;
 }
 
-#water{
-	position: fixed;
-	left: 50%;
-	margin-left: -205px;
-	top: 50%;
-	width: 410px;
-	height: 140px;
-	margin-top: 1px;
-	background: url('./img/water.gif') no-repeat center center;
-	background-attachment: fixed;
-	z-index: 10;
-}
-
 #sea{
 	position: fixed;
 	left: 50%;
 	top: 50%;
 	margin-top: 144px;
-	background-image: url('./img/sea.gif');
+	background-image: url('../img/sea.gif');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -114,16 +106,13 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 	z-index: 20;
 }
 
-p{
+h1{
 	position: fixed;
 	z-index: 100;
 	width: 300px;
-	margin-left: -150px;
-	bottom: 20px;
-	left: 50%;
-	font: 400 11px/18px 'Geneva', Sans-Serif;
-	text-align: center;
-	letter-spacing: 1px;
+	top: 20px;
+	left: 20px;
+	text-align: left;
 	a{
 		color: #000;
 		text-decoration: none;
@@ -137,6 +126,27 @@ p{
 	}
 	span.visitors{
 		color: #BBB;
+	}
+}
+
+p.tip{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	color: #DDD;
+}
+
+p.fork{
+	position: fixed;
+	text-align: right;
+	bottom: 20px;
+	right: 20px;
+	a{
+		color: #AAA;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
 	}
 }
 
